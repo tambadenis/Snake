@@ -3,6 +3,14 @@
     top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: none;
+}
+
+#start-game {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #board {
@@ -13,6 +21,11 @@
 }
 
 #score {
+    display: none;
     text-align: center;
     font-size: 140px;
+}
+
+h1 {
+    text-align: center;
 }
