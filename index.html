@@ -8,13 +8,18 @@
     <meta name="keywords" content="Snake">
     <meta name="author" content="Tamba Denis Valentin">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <h1>Snake</h1>
     <div id="score">0</div>
     <canvas id="board" width="400" height="400"></canvas>
     <br>
-    <button id="reset" onclick="window.location.reload();">Reset</button>
+    <div class="hidden-div" id="hidden-div">
+      <button class="btn btn-success" id="start-game" onclick="startGame(); generateFood();">Start</button>
+      <button id="reset" class="btn btn-danger" onclick="window.location.reload();">Reset</button>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
