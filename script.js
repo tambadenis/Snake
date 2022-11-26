@@ -21,8 +21,18 @@ let dy = 0;
 const snakeBoard = document.getElementById("board");
 const snakeBoardContext = snakeBoard.getContext("2d");
 
-startGame();
-generateFood();
+let startButton = document.getElementById('start-game');
+let resetButton = document.getElementById('reset');
+let scoreDiv = document.getElementById('score');
+
+startButton.addEventListener('click', hideshow, false);
+resetButton.addEventListener('click', hideshow, false);
+
+function hideshow() {
+  startButton.style.display = 'none';
+  resetButton.style.display = 'block';
+  scoreDiv.style.display = 'block';
+}   
 
 document.addEventListener("keydown", changeDirection);
 
@@ -39,7 +49,7 @@ function startGame() {
     moveSnake();
     generateSnake();
     startGame();
-  }, 100);
+  }, 50);
 }
 
 function resetGame() {
